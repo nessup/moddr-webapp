@@ -1,0 +1,39 @@
+@import "compass";
+@import "variables";
+
+.appContainer {
+    .segmentedControlContainer {
+        height: $segmentedControlHeight;
+        border-bottom: 1px solid #dddddd;
+        line-height: $segmentedControlHeight;
+
+        ul.segmentedControl {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            li {
+                display: inline;
+                font-size: 14px;
+                margin: 0 5px;
+                padding: 5px 8px;
+            }
+            li.disabled {
+                color: #9f9f9f;
+            }
+            li.active {
+                @include border-radius(5px);
+                background-color: #d2e3f7;
+                border: 1px solid #d2e3f7;
+                color: #003c99;
+            }
+            // li.active {
+            //     color:
+            // }
+        }
+    }
+
+    .currentView {
+        min-height: 100%;
+    }
+}

@@ -1,0 +1,15 @@
+<div class="centeringContainer">
+    <div class="centered">
+        <% if(type === 'installing') { %>
+        <span class="glyphicon glyphicon-refresh"></span>
+        <h1>Now modifying<br/>the app.</h1>
+        <h2>Please avoid disconnecting your phone<br />until recompilation is done.</h2>
+        <% } %>
+
+        <% if(type === 'noDevicesConnected') { %>
+        <span class="glyphicon glyphicon-resize-small"></span>
+        <h1>Please connect your<br/>device or emulator.</h1>
+        <h2>Once detected, you can begin modifying its installed apps.</h2>
+        <% } %>
+    </div>
+</div>

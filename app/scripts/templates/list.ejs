@@ -1,0 +1,27 @@
+<% for(var i = 0; i < list.length; i++) { %>
+<li
+<% if (list[i].callToAction) { %> class="withCTA" <% } %>
+data-index="<%= i %>">
+    <div class="leftAccessory">
+        <% if (list[i].canCheck) { %>
+        <input type="checkbox" name="checked" value="<%= list[i].checked %>" />
+        <% } %>
+        <% if (list[i].image) { %>
+        <img src="<%= list[i].image %>" />
+        <% } %>
+    </div>
+
+    <div class="centeredContainer">
+        <div class="centered">
+            <h1><%= list[i].title %></h1>
+            <h2><%= list[i].subtitle %></h2>
+        </div>
+    </div>
+
+    <% if (list[i].callToAction) { %>
+    <div class="rightAccessory" data-index="<%= i %>">
+        <%= list[i].callToAction %>
+    </div>
+    <% } %>
+</li>
+<% } %>

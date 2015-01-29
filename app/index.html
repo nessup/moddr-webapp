@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ModdrWebapp</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/toolbar.css">
+        <link rel="stylesheet" href="styles/app_container.css">
+        <link rel="stylesheet" href="styles/status_overlay.css">
+        <link rel="stylesheet" href="styles/list.css">
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <div class="toolbarContainer"></div>
+        <div class="appContainer"></div>
+
+        <script>
+            // Prevent AMD when loading. TODO: Fix this by integrating the build process from generator-backbone into generator-atomapp.
+            if (window.module) {
+                window.tempModule = window.module;
+                window.module = undefined;
+            }
+        </script>
+
+        <!-- build:js scripts/vendor.js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+        <script src="bower_components/backbone/backbone.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+        <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+        <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+        <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+        <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+        <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+        <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+        <!-- // <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script> -->
+        <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+        <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+        <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+        <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+        <!-- endbuild -->
+
+        <script>
+            // Prevent AMD when loading. TODO: Fix this by integrating the build process from generator-backbone into generator-atomapp.
+            if (window.tempModule) {
+                window.module = window.tempModule;
+                window.tempModule = undefined;
+            }
+        </script>
+
+        <!-- build:js({.tmp,app}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <script src="scripts/templates.js"></script>
+        <script src="scripts/constants.js"></script>
+        <script src="scripts/adb.js"></script>
+        <script src="scripts/device_manager.js"></script>
+        <script src="scripts/views/toolbar.js"></script>
+        <script src="scripts/views/app_container.js"></script>
+        <script src="scripts/views/status_overlay.js"></script>
+        <script src="scripts/views/list.js"></script>
+        <script src="scripts/models/device.js"></script>
+        <script src="scripts/collections/device.js"></script>
+        <script src="scripts/routes/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,50 @@
+@import "compass";
+@import "variables";
+@import "mixins";
+
+@include keyframes(rotating) {
+    from {
+        @include rotate(0deg);
+    }
+    to {
+        @include rotate(360deg);
+    }
+}
+
+.statusOverlay {
+    height: $windowHeight - ($toolbarHeight + $segmentedControlHeight);
+    font-weight: 300;
+
+    .centeringContainer {
+        display: table;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        .centered {
+            vertical-align: middle;
+            display: table-cell;
+        }
+    }
+
+    span.glyphicon, h1, h2 {
+        margin: 10px 0;
+    }
+
+    span.glyphicon {
+        font-size: 150px;
+        color: #ccc;
+    }
+    span.glyphicon-refresh {
+        @include animation(rotating 16s linear infinite);
+    }
+
+    h1 {
+        color: #2a2a2a;
+        font-size: 24px;
+    }
+
+    h2 {
+        color: #2a2a2a;
+        font-size: 14px;
+    }
+}

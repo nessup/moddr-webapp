@@ -1,0 +1,66 @@
+@import "compass";
+@import "variables";
+
+ul.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        height: $rowHeight;
+        border-bottom: 1px solid #dddddd;
+
+        .leftAccessory, .rightAccessory {
+            line-height: $rowHeight;
+        }
+        .leftAccessory {
+            float: left;
+            margin-left: 8px;
+        }
+        .rightAccessory {
+            float: right;
+            margin-right: 8px;
+            font-size: 12px;
+        }
+
+        .centeredContainer {
+            display: table;
+            height: 100%;
+            .centered {
+                display: table-cell;
+                vertical-align: middle;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        h1, h2 {
+            margin: 8px;
+            color: #2a2a2a;
+        }
+        h1 {
+            font-size: 18px;
+        }
+        h2 {
+            font-size: 14px;
+        }
+    }
+    li.withCTA {
+        position: relative;
+        padding-right: $rightAccessoryWidth;
+
+        .rightAccessory {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: $rightAccessoryWidth;
+            text-align: center;
+            border: 1px solid #0e479f;
+            @include border-radius(5px);
+            height: $rightAccessoryHeight;
+            line-height: $rightAccessoryHeight;
+            color: #0e479f;
+            margin-top: -$rightAccessoryHeight/2;
+        }
+    }
+}
